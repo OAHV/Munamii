@@ -1,6 +1,16 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 102%;
+    
+}
+
+div {
+    
+}
+
+#mainPage {
+    position: relative;
+    width: max(800px, 80%);
 }
 
 h1, h2, h3, h4, h5, h6, munamii {
@@ -20,19 +30,58 @@ cakery {
     text-transform: lowercase;
 }
 
-#header, #footer {
-    width: 100%;
-    height: 2vh;
-    position: fixed;
-    /* background-color: silver; */
+.productCake {
+    flex-basis: 200px;
+    margin:10px;
+    background-color: rgb(238, 238, 238);
+    border: 3px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    /* outline:solid silver 5px; */
+    box-shadow: 4px 4px rgb(221, 221, 221);
+    padding: 5px;
+    text-align: center;
+}
+
+.productCake img {
+    background-color: silver;
+    width: 170px;
+    height: 170px;
+}
+
+.button {
+    background-color: silver;
+    color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    text-align: center;
     padding: 20px;
+    float: right;
+}
+
+.button a:any-link, .button a:link {
+    text-decoration: none;
+    color: white;
+}
+
+#header, #footer {
+    font-size: large;
+    width: 96vw;
+    height: 3vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.11);
+    opacity: 100%;
+    padding: 5px;
+    padding-right: 100px;
+    padding-left: 50px;
     left: 0;
 }
 
-#header a, #footer a, #header a:any-link {
+#header a, #footer a, #header a:any-link, #footer a:any-link {
     text-decoration: none;
     color: white;
-    
+    opacity: 800%;
 }
 #header {
     top: 0;
@@ -40,29 +89,46 @@ cakery {
 
 #footer {
     bottom: 0;
+    text-align: right;
+}
+
+#footer, #footer a, #footer a:any-link {
+    color: black;
 }
 
 #homePage {
-
+    /* padding: 15px; */
 }
 
 #productsPage {
-
+    padding: 15px;
 }
 
 #aboutPage {
-
+    padding: 15px;
 }
 
 #contactPage {
-
+    padding: 15px;
 }
 
-#cupCakes {
-
+#cupCakes, #weddingCakes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    
+    
 }
 
 #weddingCakes {
 
 }
 
+#Isabella {
+    height: 130px;
+    clip-path: circle(50%);
+    float: right;
+    
+}
