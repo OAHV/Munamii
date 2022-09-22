@@ -10,6 +10,16 @@ includes front end like HTML, CSS & JavaScript.
     }
 }
 
+@font-face {
+    font-family: Munamii;
+    src: url(https://fonts.googleapis.com/css?family=Quicksand);
+}
+
+@font-face {
+    font-family: Cakery;
+    src: url(https://fonts.googleapis.com/css?family=Mea%20Culpa);
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 120%;
@@ -30,6 +40,7 @@ munamii {
 
 h1, h2, h3, h4, h5, h6, munamii {
     font-family: Quicksand, Geneva, Tahoma, sans-serif;    /* Google fonts */
+    /* font-family: Munamii, Verdana, Geneva, Tahoma, sans-serif; */
     color:rgb(71, 48, 30);
 }
 
@@ -40,7 +51,8 @@ a:any-link {
 
 /* <cakery> is for the Cakery keyword from the logo */
 cakery {
-    font-family: Mea Culpa;  /* Google fonts */
+    font-family: Mea Culpa, Verdana, Geneva, Tahoma, sans-serif;  /* Google fonts */
+    /* font-family: Cakery, Verdana, Geneva, Tahoma, sans-serif; */
     font-size: 200%;
     font-weight: bold;
     color: rgb(70, 167, 142);
@@ -72,7 +84,7 @@ cakery {
     padding: 2px;
 }
 
- /* The (only) button, that points to the products */
+ /* The (only) button, pointing to the products */
 .button {
     background-color: rgb(70, 167, 142);
     color: white;
@@ -88,19 +100,21 @@ cakery {
     color: white;
 }
 
-/* Here are all the different parts (pages) of
+/* 
+Here are all the different parts (pages) of
 the webpage (header, footer, mainPage, productsPage,
-aboutPage and contactsPage
+aboutPage and contactsPage.
  */
 
  /* Header and footer */
 #header, #footer {
     font-size: large;
-    width: 96vw;
+    /* width: 96vw; */
+    width: min(925px, 88%);
     height: 3vh;
     position: fixed;
     padding: 5px;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-left: 50px;
 }
 
@@ -113,6 +127,8 @@ aboutPage and contactsPage
     margin-left: 0px;
     margin-right: 10px;
     color: white;
+    /* The outline of the white text in the main menu
+        to make it visible on white background */
     text-shadow:    -1px 0 2px rgba(0, 0, 0, 0.1), 
                     0 1px 2px rgba(0, 0, 0, 0.1), 
                     1px 0 2px rgba(0, 0, 0, 0.1), 
@@ -150,7 +166,7 @@ aboutPage and contactsPage
 }
 
 #homePage img {
-    width: 40%;
+    width: max(400px,40%);
 }
 
 /* The products page - for presenting the products (cards) */
@@ -171,7 +187,7 @@ aboutPage and contactsPage
 /* The sections of the product page for 
 cup cakes and wedding cakes, respectively. */
 #cupCakes, #weddingCakes {
-    /* These are flex containers (for the cars) */
+    /* These are flex containers (for the cards) */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
