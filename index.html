@@ -1,13 +1,18 @@
 <!DOCTYPE html>
+<!-- This is a part of a C# .NET course that also
+includes front end like HTML, CSS & JavaScript. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munamii - We're at your home!</title>
+    <title>Munamii - We come to your home!</title>
+    <!-- The 'Munamii' logo font for logo in text and headings -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <!-- The handwritten style font for the 'Cakery' from the logo in text -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mea Culpa">
     <link rel="stylesheet" href="munamii.css">
+    <!-- No JavaScript in this project (empty) -->
     <script type="JavaScript" src="munamii.js"></script>
 </head>
 <body>
@@ -17,18 +22,18 @@
     <div id="header">
         <!-- The header must have a link for each of the 4 pages -->
         <!-- The header and footer must be the same across the 4 pages -->
-        <munamii>
-        <a href="#homePage">Home</a>&nbsp;&nbsp;&nbsp;
-        <a href="#aboutPage">About</a>&nbsp;&nbsp;&nbsp;
-        <a href="#productsPage">Products</a>&nbsp;&nbsp;&nbsp;
-        <a href="#contactPage">Contact</a>&nbsp;&nbsp;&nbsp;
+        <munamii>       <!-- Use the Munamii font for the top menu -->
+        <a href="#homePage">Home</a>
+        <a href="#aboutPage">About</a>
+        <a href="#productsPage">Products</a>
+        <a href="#contactPage">Contact</a>
         </munamii>
     </div>
      <div id="homePage">
         <img src="pics/munamii.jpg" alt="Our finest cake!" title="Cake"> <!-- Photo by Ana Tavares on Unsplash -->
         <img src="pics/munamiiLogo.png" alt="Munamii logo" title="Logo">
         
-        <h1>We're at your home!</h1>
+        <h1>We come to your home!</h1>
         <div class="button">
             <a href="#productsPage">Products!</a>
         </div>
@@ -44,7 +49,6 @@
     <div id="aboutPage">
         <h1>About Munamii</h1>
         <p>
-            <img id="Isabella" src="pics/Isabela Carmigniani.png" alt="Isabela Carmigniani" title="Isabela Carmigniani - Owner & Founder">
             At <munamii>Munamii</munamii> <cakery>Cakery</cakery>, each cake, each box of cupcakes that we make 
             has a very special value for us. We not only want to bring a 
             dessert to your table but rather a unique experience for you, 
@@ -52,7 +56,10 @@
             pastry market for more than 8 years and now we offer you a new 
             way to shop through our website.
         </p>
-        
+        <div id="Isabella">
+            <img src="pics/Isabela Carmigniani.png" alt="Isabela Carmigniani" title="Isabela Carmigniani - Owner & Founder">
+            <p>Isabela Carmigniani - Owner & Founder</p>
+        </div>
     </div>
     <hr>
     <div id="productsPage">
@@ -181,7 +188,7 @@
         </p>
         <p>
             Place to pick up order: Via la Costa Avenue. Blue Port gated 
-            neighbourhood. We will send you the GPS Location via <a href="laksjdfhl">WhatsApp</a>.
+            neighbourhood. We will send you the GPS Location via <a href="https://whatsapp.com/" target="_blank"><img height= "15em" src="pics/whatsapp_logo-2x.png" alt="WhatsApp"> WhatsApp</a>.
         </p>
         <p>
             Orders must be placed 2 days before for greater security, 
@@ -205,6 +212,8 @@
         <!-- The footer also must have a link to contact her via email -->
         <!-- The header and footer must be the same across the 4 pages -->
 
+        <a href="https://whatsapp.com/" target="_blank"><img height= "100%" src="pics/whatsapp_logo-2x.png" alt="WhatsApp"> WhatsApp</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://mailchimp.com/" target="_blank"><img height= "100%" src="pics/Mailchimp.png" alt="MailChimp"></a>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.instagram.com/munamii.cakery/" target="_blank"><img height= "100%" src="pics/Instagram_Glyph_Gradient.jpg" alt="Instagram"> Instagram </a>

@@ -1,62 +1,85 @@
+/* CSS for Munamii
+This is a part of a C# .NET course that also
+includes front end like HTML, CSS & JavaScript.
+*/
+
+/* Main settings and defaults */
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 102%;
-    
+    font-size: 120%;
 }
 
-div {
-    
-}
-
+/* The main div encapsulating all */
 #mainPage {
-    position: relative;
-    width: max(800px, 80%);
+    position: relative; 
+    width: min(1024px, 100%);
+    background-color: rgb(250, 250, 250);
 }
 
-h1, h2, h3, h4, h5, h6, munamii {
-    font-family: Quicksand;
-    color:rgb(71, 48, 30);
-}
-
+/* Font for headers and logo (in text) */
+/* <munamii> is for the logo text and headings */
 munamii {
     font-size: 120%;
 }
 
+h1, h2, h3, h4, h5, h6, munamii {
+    font-family: Quicksand, Geneva, Tahoma, sans-serif;    /* Google fonts */
+    color:rgb(71, 48, 30);
+}
+
+a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* <cakery> is for the Cakery keyword from the logo */
 cakery {
-    font-family: Mea Culpa;
+    font-family: Mea Culpa;  /* Google fonts */
     font-size: 200%;
     font-weight: bold;
     color: rgb(70, 167, 142);
     text-transform: lowercase;
 }
 
+ /* For the product 'cards' */
 .productCake {
     flex-basis: 200px;
     margin:10px;
-    background-color: rgb(238, 238, 238);
-    border: 3px solid rgb(226, 226, 226);
+    background-color: white;
+    border: 1px solid rgb(226, 226, 226);
     border-radius: 10px;
-    /* outline:solid silver 5px; */
-    box-shadow: 4px 4px rgb(221, 221, 221);
+    box-shadow: 4px 4px 10px rgb(221, 221, 221) ;
     padding: 5px;
     text-align: center;
 }
 
-.productCake img {
-    background-color: silver;
-    width: 170px;
-    height: 170px;
+.productCake:hover {
+    box-shadow: 8px 8px 5px gray;
+    transform: scale(1.05,1.05);
 }
 
+.productCake img {
+    background-color: white;
+    border: 1px solid silver;
+    width: 170px;
+    height: 170px;
+    padding: 2px;
+}
+
+ /* The (only) button, that points to the products */
 .button {
-    background-color: silver;
+    background-color: rgb(70, 167, 142);
     color: white;
-    width: 100px;
-    height: 20px;
     border: 1px solid silver;
     border-radius: 15px;
     text-align: center;
-    padding: 20px;
+    padding: 12px 25px;
     float: right;
 }
 
@@ -65,70 +88,113 @@ cakery {
     color: white;
 }
 
+/* Here are all the different parts (pages) of
+the webpage (header, footer, mainPage, productsPage,
+aboutPage and contactsPage
+ */
+
+ /* Header and footer */
 #header, #footer {
     font-size: large;
     width: 96vw;
     height: 3vh;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.11);
-    opacity: 100%;
     padding: 5px;
     padding-right: 100px;
     padding-left: 50px;
-    left: 0;
 }
 
+/* Links within header and footer */
 #header a, #footer a, #header a:any-link, #footer a:any-link {
+    display: inline-block;   /* To be able to transform */
     text-decoration: none;
+    vertical-align: text-top;
+    width: 100px;
+    margin-left: 0px;
+    margin-right: 10px;
     color: white;
-    opacity: 800%;
+    text-shadow:    -1px 0 2px rgba(0, 0, 0, 0.1), 
+                    0 1px 2px rgba(0, 0, 0, 0.1), 
+                    1px 0 2px rgba(0, 0, 0, 0.1), 
+                    0 -1px 2px rgba(0, 0, 0, 0.1);
 }
+
+/* The header at the top with downward gradient */
 #header {
     top: 0;
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
+#header a:hover {
+    color: rgb(70, 167, 142);
+    transform: scale(1.3, 1.3);
+}
+
+/* The footer at the bottom with upward gradient */
 #footer {
     bottom: 0;
     text-align: right;
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
-#footer, #footer a, #footer a:any-link {
+#footer a, #footer a:any-link {
+    display: inline;
     color: black;
 }
 
+/* The main first info page with pictures */
 #homePage {
-    /* padding: 15px; */
+    padding: 15px;
 }
 
+#homePage img {
+    width: 40%;
+}
+
+/* The products page - for presenting the products (cards) */
 #productsPage {
     padding: 15px;
 }
 
+/* The aboutPage */
 #aboutPage {
     padding: 15px;
 }
 
+/* The contacts page */
 #contactPage {
     padding: 15px;
 }
 
+/* The sections of the product page for 
+cup cakes and wedding cakes, respectively. */
 #cupCakes, #weddingCakes {
+    /* These are flex containers (for the cars) */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: space-between;
-    
-    
 }
 
-#weddingCakes {
-
-}
-
+/* The round picture of the owner/founder */
 #Isabella {
-    height: 130px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Isabella p {
+    font-size: small;
+}
+
+#Isabella img {
+    display: block;
+    height: 190px;
     clip-path: circle(50%);
-    float: right;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
