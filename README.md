@@ -22,6 +22,8 @@ I have learned a lot about:
 <li>Flexbox
 <li>Grid (though I didn't use it for this project)
 <li>Clipping
+<li>Forms
+<li>Scroll
 <li>Cup cakes
 </ul>
 

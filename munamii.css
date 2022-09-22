@@ -20,6 +20,10 @@ includes front end like HTML, CSS & JavaScript.
     src: url(https://fonts.googleapis.com/css?family=Mea%20Culpa);
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 120%;
@@ -213,4 +217,16 @@ cup cakes and wedding cakes, respectively. */
     clip-path: circle(50%);
     margin-left: auto;
     margin-right: auto;
+}
+
+form {
+    display: block;
+    border: 1px solid black;
+    padding: 25px;
+    width:fit-content;
+    margin: 15px auto 50px auto;
+}
+
+input {
+    margin: 5px;
 }
